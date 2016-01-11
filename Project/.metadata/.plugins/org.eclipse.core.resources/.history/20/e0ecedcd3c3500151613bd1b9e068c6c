@@ -1,0 +1,68 @@
+/*
+ * Exercise 11.1
+ * (The Triangle class) Design a class named Triangle that extends GeometricObject. The class contains:
+ * 
+ - Three double data fields named side1, side2, and side3 with default values 1.0 to denote three sides of the triangle
+ - A no-arg constructor that creates a triangle.
+ - A constructor that creates a triangle with the specific side1, side2,and side3.
+ - The accessor methods for all three data fields.
+ - A method named getArea() that returns the area if this triangle.
+ - A method named getPerimeter() that returns the perimeter of this triangle.
+ - A method named toString() that returns a string description for the triangle.
+
+For the formula to compute the area of a triangle, see ProgrammingExercise 2.19.
+The toString() method is implemented as follows:
+
+return " Triangle: side1 = " + side1 + " side2 = " + side2 + " side3 " + side3;
+
+Draw the UML diagrams for the classes Triangle and GeometricObject and 
+implement the classes. Write a test program that prompts the user to enter three
+sides of the triangle, a color, and a boolean value to indicate wheter the triangle
+is filled. The program should create a triangle object with these sides and set 
+the color and filled properties using the input. The program should display 
+the area, perimeter, color and true or false to indicate whether it is filled or not.
+
+ */
+
+import java.util.Scanner;
+
+public class ExerciseOne {
+
+	    private double side1 = 1.0;
+	    private double side2 = 1.0;
+	    private double side3 = 1.0;
+
+	    public static void main(String[] args) {
+	    	
+	        Scanner input = new Scanner(System.in);
+
+	        System.out.println("Enter three sides of the Triangle");
+	        double side1 = input.nextDouble();
+	        double side2 = input.nextDouble();
+	        double side3 = input.nextDouble();
+
+	        Triangle T = new Triangle(side1, side2, side3);
+	        
+	        System.out.println("Enter the color of the Triangle");
+	        String color = input.next();
+	        T.setColor(color);
+	     
+	        System.out.println(" Is the Triangle filled? Reply with 'True' or 'False' ");
+	        String filled = input.next(); 
+	        
+	        if (filled == "True") T.setFilled(true);
+	        else T.setFilled(false);
+	        
+	        System.out.println("The Triangle Sides are \n side 1: " + side1 + "\n Side 2: " + side2 + "\n Side 3: " + side3);
+	        System.out.println("The Triangle's Area is " + T.getArea());
+	        System.out.println("The Triangle's Perimeter is "
+	                           + (side1 + side2 + side3));
+	        System.out.println("The Triangle's Color is " + T.getColor() );
+	        
+	        if (T.isFilled()) 
+	        System.out.println("This Triangle filled" );
+	        else
+	        	System.out.println("This Triabgle is NOT filled");
+
+	    }
+	}

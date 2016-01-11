@@ -1,0 +1,14 @@
+INDEX VERSION 1.127+/Users/Aqrabawi/Documents/Trios/Java/Project/.metadata/.plugins/org.eclipse.jdt.core
+40939485.index
+3009788793.index
+2028373806.index
+711781059.index
+3855123162.index
+1567349333.index
+197583862.index
+3802482371.index
+1970773835.index
+2463085132.index
+3294792687.index
+2510452309.index
+2093077344.index
